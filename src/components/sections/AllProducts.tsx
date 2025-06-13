@@ -129,7 +129,7 @@ export default function AllProducts() {
               key={i}
               className={`w-10 h-10 rounded-full flex items-center justify-center mx-1 ${
                 activePage === i + 1
-                  ? 'bg-primary text-white'
+                  ? 'bg-[#00897b] text-white'
                   : 'hover:bg-gray-100'
               }`}
               onClick={() => setActivePage(i + 1)}

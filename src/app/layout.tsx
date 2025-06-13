@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Inter, Poppins, Saira } from "next/font/google";
 import "./globals.css";
 
 // Import components
@@ -20,6 +20,13 @@ const poppins = Poppins({
   display: "swap",
 });
 
+const saira = Saira({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-saira",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "FurniShop - Creative Home Simplify Your Furniture",
   description: "High-quality furniture for your home and office",
@@ -33,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} antialiased`}
+        className={`${inter.variable} ${poppins.variable} ${saira.variable} antialiased`}
       >
         <Providers>
           <Header />

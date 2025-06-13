@@ -81,7 +81,7 @@ export default function Testimonials() {
                   <button
                     key={i}
                     className={`h-2 w-2 rounded-full mx-1 ${
-                      activeIndex === i ? 'bg-primary' : 'bg-gray-300'
+                      activeIndex === i ? 'bg-[#00897b]' : 'bg-gray-300'
                     }`}
                     onClick={() => setActiveIndex(i)}
                     aria-label={`Go to testimonial ${i + 1}`}
@@ -90,7 +90,7 @@ export default function Testimonials() {
 
                 <button
                   onClick={nextTestimonial}
-                  className="h-10 w-10 rounded-full border border-gray-300 flex items-center justify-center ml-3 bg-primary text-white border-primary"
+                  className="h-10 w-10 rounded-full border border-gray-300 flex items-center justify-center ml-3 bg-primary border-primary"
                   aria-label="Next testimonial"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
