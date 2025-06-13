@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --teal-gradient: linear-gradient(to right, #00897b, #009688);
+  --footer-bg: #121826;
+  --footer-border: #2A3042;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Newsletter section styling */
+.newsletter-section {
+  background-image: var(--teal-gradient);
+  background-size: cover;
+  position: relative;
+}
+
+.newsletter-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/images/pattern-dots.png');
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Footer styling */
+.footer {
+  background-color: var(--footer-bg);
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  margin: 0;
+  justify-content: flex-start;
+}
+
+.footer-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background: #23293a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2A3042;
+  transition: background-color 0.2s;
+}
+
+.footer-icon:hover {
+  background-color: #3A4052;
+}
+
+.footer-container {
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 2.5rem;
+  max-width: 1680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-divider {
+  border-bottom: 2.5px solid #43485a;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0;
+  justify-content: flex-end;
+}
+
+.footer-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background: #23293a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #23293a;
+  box-shadow: 0 2px 8px 0 rgba(20,20,30,0.10);
+  transition: background-color 0.2s;
+}
+.footer-icon:hover {
+  background-color: #3A4052;
+}
